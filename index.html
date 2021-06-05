@@ -72,7 +72,7 @@ body{
             
             function countdownTimeStart(){
             
-            var countDownDate = new Date("Jun 4, 2021 19:23:00").getTime();
+            var countDownDate = new Date("Jun 5, 2021 12:02:00").getTime();
             
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -88,9 +88,29 @@ body{
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 
-                // Output the result in an element with id="demo"
-                document.getElementById("countdown").innerHTML =  minutes + " Minutes " + seconds + " Seconds Left ";
                 
+                document.getElementById("countdown").innerHTML = "Test Will start in " + String(minutes-45) + " Minutes " + seconds + " Seconds";
+
+                if(distance < 2702000 && distance > 2699999){
+                    window.location.reload();
+                    window.alert(SASI);
+                }
+
+
+                // Output the result in an element with id="demo"
+                if(distance < 2700000){
+                    
+                document.getElementById("countdown").innerHTML =  minutes + " Minutes " + seconds + " Seconds Left ";
+                document.getElementById("countalert").innerHTML ="Test Started!";
+            
+                }
+
+                if(distance < 2640000){
+                document.getElementById("countdown").innerHTML =  minutes + " Minutes " + seconds + " Seconds Left ";
+                document.getElementById("countalert").innerHTML ="";
+                
+            
+                }
 
                 // If the count down is 5mins, give alert
                 if(distance < 300000){
