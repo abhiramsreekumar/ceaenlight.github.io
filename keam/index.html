@@ -1,35 +1,22 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>
-       NSS CEA Enlight KEAM
-    </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS CEA Enlight KEAM</title>
 
-body{
+<style>
+    body{
     margin: 0;
     background-color: #e6d6e2;
-}    
-.container {
-  background-color: #e6d6e2;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding-top: 45%; /* 1:1 Aspect Ratio */
+    height: 87%;
+}  
+
+.first {
+  padding: .5ex;
+  background-color: aquamarine;
 }
 
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 #countdown{
     text-align: center;
     margin-top: 0;
@@ -39,43 +26,26 @@ body{
     color: red;
     margin-bottom: 0;   
 }
-.first{
-    background-color: aquamarine;
-    width: 100%;
-    
-    
-}
-@media only screen and (max-width: 600px) {
-    .container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding-top: 150%; /* 1:1 Aspect Ratio */
-}
-}
-
+     
+        
 </style>
 </head>
+
 <body onload="countdownTimeStart()">
-<div class="first">
-<h1 id="countdown">
-<h2 id="countalert"></h3>
-</div>
+    <div class="first">
+        <h1 id="countdown">
+        <h2 id="countalert"></h3>
+        </div>
 
-<div class="container"> 
-  <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdfTHNGV_AxVGTzIAFBiRDgdeOGycj0ZPF4N_FG4Nwp9HFAcA/viewform?embed=true"></iframe>
-</div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffn8B-kuGpmtPdghcgzrZ5C5ud0a2vpEyru9Dmoaqy7D0olA/viewform?embed=true" width="100%" height="100%"></iframe>
 
 
-
-
-<script>
+        <script>
             // Set the date we're counting down to
             
             function countdownTimeStart(){
             
-            var countDownDate = new Date("Jun 6, 2021 17:15:00").getTime();
+            var countDownDate = new Date("Jun 9, 2021 17:15:00").getTime();
             
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -85,14 +55,17 @@ body{
                 
                 // Find the distance between now an the count down date
                 var distance = countDownDate - now;
+                var sasi = distance - 2700000;
                 
                 // Time calculations for days, hours, minutes and seconds
                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var sasihr = Math.floor((sasi % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var sasimin = Math.floor((sasi % (1000 * 60 * 60)) / (1000 * 60));
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 
                 
-                document.getElementById("countdown").innerHTML = "Test Will start in " + String(minutes-45) + " Minutes " + seconds + " Seconds";
+                document.getElementById("countdown").innerHTML = "Test Will start in " +sasihr+ " Hours " + sasimin + " Minutes " + seconds + " Seconds";
 
                 if(distance < 2702000 && distance > 2699999){
                     window.location.reload();
@@ -162,4 +135,3 @@ body{
         
             </script>
 </body>
-</html>
