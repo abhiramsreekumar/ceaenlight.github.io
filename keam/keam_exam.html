@@ -95,14 +95,14 @@
             
             function countdownTimeStart(){
             
-              var timer = sessionStorage.getItem('timer_station');
+              var timer = sessionStorage.getItem('timer_station1');
               if (!timer){
-              timer = 2700
+              timer = 360
               }
               var interval = setInterval(function () {
               timer--;
               console.log(timer);
-              sessionStorage.setItem('timer_station', timer);
+              sessionStorage.setItem('timer_station1', timer);
               var hours = Math.floor((timer % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
               var minutes = Math.floor((timer % (1 * 60 * 60)) / (1 * 60));
               var seconds = Math.floor((timer % (1 * 60)) / 1);
