@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSS CEA Enlight Final</title>
+    <title>NSS CEA Enlight Keam</title>
 
 <style>
     body{
@@ -95,14 +95,14 @@
             
             function countdownTimeStart(){
             //Local Storage, stores the timer, does not clear when user closes browser
-              var timer = localStorage.getItem('timer_station2'); // Change item name before every test as previous local storage will not be cleared
+              var timer = localStorage.getItem('timer_sasi'); // Change item name before every test as previous local storage will not be cleared
               if (!timer){
-              timer = 120 //45 Minutes in seconds
+              timer = 2700 //45 Minutes in seconds
               }
               var interval = setInterval(function () {
               timer--;
               console.log(timer);
-              localStorage.setItem('timer_station2', timer); //IMPORTANT!! Change the item Variable Name before Every Test!!!
+              localStorage.setItem('timer_sasi', timer); //IMPORTANT!! Change the item Variable Name before Every Test!!!
 
               var hours = Math.floor((timer % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
               var minutes = Math.floor((timer % (1 * 60 * 60)) / (1 * 60));
