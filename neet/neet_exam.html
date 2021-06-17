@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSS CEA Enlight KEAM</title>
+    <title>NSS CEA Enlight NEET</title>
 
 <style>
     body{
@@ -91,18 +91,19 @@
 
 
         <script>
-            // Set the date we're counting down to
+            // Function call
             
             function countdownTimeStart(){
-            
-              var timer = sessionStorage.getItem('timer_station');
+            //Local Storage, stores the timer, does not clear when user closes browser
+              var timer = localStorage.getItem('timer_sasi'); // Change item name before every test as previous local storage will not be cleared
               if (!timer){
-              timer = 2700
+              timer = 2700 //45 Minutes in seconds
               }
               var interval = setInterval(function () {
               timer--;
               console.log(timer);
-              sessionStorage.setItem('timer_station', timer);
+              localStorage.setItem('timer_sasi', timer); //IMPORTANT!! Change the item Variable Name before Every Test!!!
+
               var hours = Math.floor((timer % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
               var minutes = Math.floor((timer % (1 * 60 * 60)) / (1 * 60));
               var seconds = Math.floor((timer % (1 * 60)) / 1);
@@ -113,13 +114,15 @@
   
 
 
-                // Output the result in an element with id="demo"
+                //Displays When time is less than 45 Mins
                 if(timer < 2700){
                     
                 document.getElementById("countdown").innerHTML =  minutes + " Minutes " + seconds + " Seconds Left ";
                 document.getElementById("countalert").innerHTML ="Test Started!";
             
                 }
+
+                //Displays When time is less than 44 Mins
 
                 if(timer < 2640){
                 document.getElementById("countdown").innerHTML =  minutes + " Minutes " + seconds + " Seconds Left ";
@@ -133,13 +136,13 @@
                     document.getElementById("countalert").innerHTML = minutes + " Minutes left!";
                 }
                 
-                // If the count down is over, write some text 
+                // If the count down is over, Show Submit Now
                 if (timer < 0) {
                     document.getElementById("countdown").innerHTML = "Submit Now!";
                     document.getElementById("countalert").innerHTML = "";
                     
                 }
-                 
+                 //10 Seconds past 0 Show final warning to submit
                 if (timer < -10) {
 
                     seconds= seconds+60;
@@ -150,13 +153,15 @@
                     
                     
                     
-                    
+                    //60 Seconds past 0 Show form closed
                     
                 }
                 if (timer < -60) {
                 document.getElementById("countdown").innerHTML = "Form Closed!";
                 document.getElementById("countalert").innerHTML = "!";
                 }
+
+                //62 Seconds past 0 Display overlay
 
                 if (timer < -62) {
                 
