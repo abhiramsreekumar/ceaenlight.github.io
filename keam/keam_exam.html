@@ -26,6 +26,11 @@
     color: red;
     margin-bottom: 0;   
 }
+#countwarn{
+    text-align: center;
+    color: red;
+    margin-bottom: 0;   
+}
 
 .overlay {
   height: 100%;
@@ -100,7 +105,8 @@
 
     <div class="first">
         <h1 id="countdown">
-        <h2 id="countalert"></h3>
+        <h2 id="countalert"></h2>
+        <h5 id="countwarn"></h3>
           <button style="display:none1;" onclick="resetStartTime()">Reset</button> 
         </div>
 
@@ -175,6 +181,10 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
                 document.getElementById("myNav1").style.width = "100%";
                        
                      }
+                     if(n>0){
+                      document.getElementById("countwarn").innerHTML ="If You Refresh This Window 1 More Time You Will Be Disqualified!";
+                        
+                     }   
 
                  
 
@@ -198,6 +208,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 
                 document.getElementById("myNav2").style.width = "100%";
                        
+                     }
+                     if(k>0){
+                      document.getElementById("countwarn").innerHTML ="If You Leave This Window 1 More Time You Will Be Disqualified!";
+                        
                      }   
     
     var secsDiff = new Date().getTime() - startTime.getTime();
