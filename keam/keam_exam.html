@@ -10,7 +10,7 @@
     body{
     margin: 0;
     background-color: #e6d6e2;
-    height: 87%;
+    height: 85%;
 }  
 
 .first {
@@ -47,7 +47,7 @@
 
 .overlay-content {
   position: relative;
-  top: 10%;
+  top: 5%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -56,7 +56,7 @@
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 26px;
   color: #f1f1f1;
   display: block;
   transition: 0.3s;
@@ -91,7 +91,7 @@
       <div id="myNav1" class="overlay">
         <div class="overlay-content">
           <a href="#">OOPS!!</a>
-          <img src ="images/cat.webp" height="300" width="300">
+          <img src ="images/cat.webp" height="250" width="250">
           <a href="#">Malpractice Detected! <br> if you think this is a mistake, contact us. </a>
         </div>
       </div>
@@ -99,7 +99,7 @@
       <div id="myNav2" class="overlay">
         <div class="overlay-content">
           <a href="#">OOPS!!</a>
-          <img src ="images/cat.webp" height="300" width="300">
+          <img src ="images/cat.webp" height="250" width="250">
           <a href="#">Malpractice Detected!<br>You switched the browser Window  <br> if you think this is a mistake, contact us. </a>
         </div>
       </div>
@@ -189,12 +189,12 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
           n++;
           localStorage.setItem("loadcount3", n);
           console.log(n);
-          if (n > 2) {
+          if (n > 3) {
                 
                 document.getElementById("myNav1").style.width = "100%";
                        
                      }
-                     if(n>0){
+                     if(n>1){
                       document.getElementById("countwarn").innerHTML ="If You Refresh This Window 1 More Time You Will Be Disqualified!";
                         
                      }   
