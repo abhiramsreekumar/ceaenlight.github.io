@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSS CEA Enlight Final</title>
+    <script src="nosleep.js"></script>
 
 <style>
     body{
@@ -107,13 +108,25 @@
         <h1 id="countdown">
         <h2 id="countalert"></h2>
         <h5 id="countwarn"></h3>
-          <button style="display:none1;" onclick="resetStartTime()">Reset</button> 
+          <button style="display:none;" onclick="resetStartTime()">Reset</button> 
         </div>
 
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfe8WKJCaqiwRQN2s8oHsFfO7rV8C0XqyV4r8HApUmPY-gN2A/viewform?embed=true" width="100%" height="100%"></iframe>
 
 
         <script>
+          var noSleep = new NoSleep();
+
+var wakeLockEnabled = false;
+  if (!wakeLockEnabled) {
+    noSleep.enable(); // keep the screen on!
+    wakeLockEnabled = true;
+  }
+    
+
+
+
+
           var k = localStorage.getItem('switchcount5');
           var vis = (function(){
 	var stateKey, eventKey, keys = {
@@ -176,12 +189,12 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
           n++;
           localStorage.setItem("loadcount3", n);
           console.log(n);
-          if (n > 3) {
+          if (n > 2) {
                 
                 document.getElementById("myNav1").style.width = "100%";
                        
                      }
-                     if(n>1){
+                     if(n>0){
                       document.getElementById("countwarn").innerHTML ="If You Refresh This Window 1 More Time You Will Be Disqualified!";
                         
                      }   
