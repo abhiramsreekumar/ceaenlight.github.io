@@ -115,20 +115,55 @@
 
 
         <script>
-          var noSleep = new NoSleep();
 
+//No Back Button
+(function (global) {
+
+if(typeof (global) === "undefined") {
+    throw new Error("window is undefined");
+}
+
+var _hash = "!";
+var noBackPlease = function () {
+    global.location.href += "#";
+
+    // Making sure we have the fruit available for juice (^__^)
+    global.setTimeout(function () {
+        global.location.href += "!";
+    }, 50);
+};
+
+global.onhashchange = function () {
+    if (global.location.hash !== _hash) {
+        global.location.hash = _hash;
+    }
+};
+
+global.onload = function () {
+    noBackPlease();
+
+    // Disables backspace on page except on input fields and textarea..
+    document.body.onkeydown = function (e) {
+        var elm = e.target.nodeName.toLowerCase();
+        if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+            e.preventDefault();
+        }
+        // Stopping the event bubbling up the DOM tree...
+        e.stopPropagation();
+    };
+}
+})(window);     
+
+//JS to Prevent the Screen From Turning Off
+var noSleep = new NoSleep();
 var wakeLockEnabled = false;
   if (!wakeLockEnabled) {
     noSleep.enable(); // keep the screen on!
     wakeLockEnabled = true;
   }
-    
-
-
-
-
-          var k = localStorage.getItem('switchcount5');
-          var vis = (function(){
+//To check if user is on the browser  
+var k = localStorage.getItem('switchcount5');//
+var vis = (function(){
 	var stateKey, eventKey, keys = {
 		hidden: "visibilitychange",
 		webkitHidden: "webkitvisibilitychange",
@@ -162,26 +197,12 @@ vis(function(){
   {
     k++;
     localStorage.setItem("switchcount5", k);
-    console.log(new Date, k);
-    
-    
-
-    
+    console.log(new Date, k);   
   }
-
-  
-  
 
 });
 
-
-
-
-
-
-
-
-
+//To check the number of page loads
 var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
           if (n === null) {
           n = 0;
@@ -202,7 +223,7 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
                  
 
 
-
+//Dynamic Countdown
         // Code goes here
 function resetStartTime() {
   startTime = new Date();
@@ -222,8 +243,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 document.getElementById("myNav2").style.width = "100%";
                        
                      }
-                     if(k>0){
-                      document.getElementById("countwarn").innerHTML ="If You Leave This Window 1 More Time You Will Be Disqualified!";
+                     if(k>0){ //Counter to alert of malpractice
+                      document.getElementById("countwarn").innerHTML ="If You Leave/Refresh This Window 1 More Time You Will Be Disqualified!";
                         
                      }   
     
