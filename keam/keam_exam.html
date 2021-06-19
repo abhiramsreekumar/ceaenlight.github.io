@@ -114,56 +114,17 @@
         </div>
       </div>
 
-    <div class="first">
+    <div id="fra" class="first">
         <h1 id="countdown">
         <h2 id="countalert"></h2>
         <h5 id="countwarn"></h3>
-          <button style="display:none;" onclick="resetStartTime()">Reset</button> 
+          <button style="display:none;" onclick="resetStartTimedelethis()">Reset</button> 
         </div>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfe8WKJCaqiwRQN2s8oHsFfO7rV8C0XqyV4r8HApUmPY-gN2A/viewform?embed=true" width="100%" height="100%"></iframe>
-
-<script>
-//No Back Button
-(function (global) {
-
-if(typeof (global) === "undefined") {
-    throw new Error("window is undefined");
-}
-
-var _hash = "!";
-var noBackPlease = function () {
-    global.location.href += "#";
-
-    // Making sure we have the fruit available for juice (^__^)
-    global.setTimeout(function () {
-        global.location.href += "!";
-    }, 50);
-};
-
-global.onhashchange = function () {
-    if (global.location.hash !== _hash) {
-        global.location.hash = _hash;
-    }
-};
-
-global.onload = function () {
-    noBackPlease();
-
-    // Disables backspace on page except on input fields and textarea..
-    document.body.onkeydown = function (e) {
-        var elm = e.target.nodeName.toLowerCase();
-        if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
-            e.preventDefault();
-        }
-        // Stopping the event bubbling up the DOM tree...
-        e.stopPropagation();
-    };
-}
-})(window);     
+        <iframe id="fram" src="https://docs.google.com/forms/d/e/1FAIpQLSfe8WKJCaqiwRQN2s8oHsFfO7rV8C0XqyV4r8HApUmPY-gN2A/viewform?embed=true" width="100%" height="100%"></iframe>
 
 
-</script>
+
         <script>
 
 
@@ -227,6 +188,8 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
           if (n > 3) {
                 
                 document.getElementById("myNav1").style.width = "100%";
+                document.getElementById("fram").style.display = "none";
+                   document.getElementById("fra").style.display = "none";
                        
                      }
                      if(n>1){
@@ -255,6 +218,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     if (k > 3) {
                 
                 document.getElementById("myNav2").style.width = "100%";
+                document.getElementById("fram").style.display = "none";
+                   document.getElementById("fra").style.display = "none";
                        
                      }
                      if(k>0){ //Counter to alert of malpractice
@@ -324,6 +289,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
                     if (ultrasasi < -62) {
                     
                    document.getElementById("myNav").style.width = "100%";
+                   document.getElementById("fram").style.display = "none";
+                   document.getElementById("fra").style.display = "none";
                           
                         }
     
