@@ -34,7 +34,6 @@
 }
 
 .overlay {
-  
   height: 100%;
   width: 0;
   position: fixed;
@@ -47,10 +46,7 @@
 }
 
 .overlay-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   top: 5%;
   width: 100%;
   text-align: center;
@@ -70,23 +66,16 @@
   color: #f1f1f1;
 }
 
-
-
- 
-
-.span_mobile
-{ 
-
+.span_mobile{
   display: none;
-
-}
-.span_overlay_mobile
-{ 
-
-  display: none;
-
 }
 
+.span_overlay_mobile{
+  background-color: cadetblue;
+  border-radius: 10%;
+  padding: 10px;
+  margin-top: 10px;
+}
 
 
 @media screen and (max-height: 450px) {
@@ -98,34 +87,18 @@
   }
   
 }
-
 @media screen and  (max-width: 800px){
-
-  .span_mobile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .span_overlay_mobile{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 60;
-    text-align: center;
-    border: blanchedalmond;
-    padding: auto;
-    border-radius: 30%;
-    background-color: #f1f1f1;
-    color: black;
-    padding: 10;
-    font-family: poppins;
-  }
-  .span_pc{
+  .hide_mob{
     display: none;
   }
-}     
+  .span_mobile{
+  display: block;
+}
+
+
+
+}
+     
         
 </style>
 </head>
@@ -140,57 +113,28 @@
 
       <div id="myNav1" class="overlay">
         <div class="overlay-content">
-          <div class="span_pc">
-            <a href="#">OOPS!!</a>
-            <img src ="images/cat.webp" height="250" width="250">
-            <a href="#">Malpractice Detected!<br>You switched The Browser Window  <br> If You Think This Is A Mistake, Contact Us.<br> Alen :9446896468
-            <br>
-          
-          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen</span></a>
-          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac</span></a> 
-        </div> 
+          <a href="#">OOPS!!</a>
+          <img src ="images/cat.webp" height="250" width="250">
+          <a href="#">Malpractice Detected! <br> If You Think This Is A Mistake, Contact Us. <br><span class ="hide_mob">Alen - 9446896468</span> </a>
           <div class="span_mobile">
-            <img src="images/WhatsApp.png" width="40" height="40">
+            <img src="images/WhatsApp.png" width="40" height="40"><br>
           
-          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen</span></a>
-          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac</span></a> 
-        </div> 
+          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen T Mathews</span></a><br>
+          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac Thomas Varghese</span></a> 
+        </div>
         </div>
       </div>
 
-      <div id="myNav2" class="overlay">
-        <div class="overlay-content">
-          
-          <div class="span_pc">
-            <a href="#">OOPS!!</a>
-            <img src ="images/cat.webp" height="250" width="250">
-            <a href="#">Malpractice Detected!<br>You switched The Browser Window  <br> If You Think This Is A Mistake, Contact Us.<br> Alen :9446896468
-            <br>
-          
-          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen</span></a>
-          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac</span></a> 
-        </div> 
-          <div class="span_mobile">
-            <a href="#">OOPS!!</a>
-            <img src ="images/cat.webp" height="250" width="250">
-            <a href="#">Malpractice Detected!<br>You switched The Browser Window  <br> If You Think This Is A Mistake, Contact Us.
-            <br>
-            <img src="images/WhatsApp.png" width="40" height="40">
-          
-          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen</span></a>
-          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac</span></a> 
-        </div> 
-        </div>
-      </div>
 
-    <div class="first">
+
+    <div class="first" id="fra">
         <h1 id="countdown">
         <h2 id="countalert"></h2>
         <h5 id="countwarn"></h3>
-          <button style="display:none;" onclick="resetStartTime()">Reset</button> 
+          <button style="display:none1;" onclick="resetStartTime()">Reset</button> 
         </div>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfe8WKJCaqiwRQN2s8oHsFfO7rV8C0XqyV4r8HApUmPY-gN2A/viewform?embed=true" width="100%" height="100%"></iframe>
+        <iframe id="fr" src="https://docs.google.com/forms/d/e/1FAIpQLSfe8WKJCaqiwRQN2s8oHsFfO7rV8C0XqyV4r8HApUmPY-gN2A/viewform?embed=true" width="100%" height="100%"></iframe>
 
 <script>
 //No Back Button
@@ -244,46 +188,9 @@ var wakeLockEnabled = false;
     noSleep.enable(); // keep the screen on!
     wakeLockEnabled = true;
   }
-//To check if user is on the browser  
-var k = localStorage.getItem('switchcount5');//
-var vis = (function(){
-	var stateKey, eventKey, keys = {
-		hidden: "visibilitychange",
-		webkitHidden: "webkitvisibilitychange",
-		mozHidden: "mozvisibilitychange",
-		msHidden: "msvisibilitychange"
-	};
-	for (stateKey in keys) {
-		if (stateKey in document) {
-			eventKey = keys[stateKey];
-			break;
-		}
-	}
-	return function(c) {
-		if (c) {
-			document.addEventListener(eventKey, c);
-			//document.addEventListener("blur", c);
-			//document.addEventListener("focus", c);
-		}
-		return !document[stateKey];
-	}
-})();
 
-vis(function(){
-	console.log( 'visible ?', vis());
-  
-  if (k === null) {
-          k = 0;
-          }
 
-  if(vis)
-  {
-    k++;
-    localStorage.setItem("switchcount5", k);
-    console.log(new Date, k);   
-  }
 
-});
 
 //To check the number of page loads
 var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
@@ -293,9 +200,11 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
           n++;
           localStorage.setItem("loadcount3", n);
           console.log(n);
-          if (n > 3) {
+          if (n > 2) {
                 
                 document.getElementById("myNav1").style.width = "100%";
+                document.getElementById("fr").style.display = "none";
+                document.getElementById("fra").style.display = "none";
                        
                      }
                      if(n>1){
@@ -321,15 +230,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   startTime = new Date(window.localStorage.getItem('startTime') || resetStartTime());
   // start timer
   window.setInterval(function() {
-    if (k > 3) {
-                
-                document.getElementById("myNav2").style.width = "100%";
-                       
-                     }
-                     if(k>0){ //Counter to alert of malpractice
-                      document.getElementById("countwarn").innerHTML ="If You Leave/Refresh This Window 1 More Time You Will Be Disqualified!";
-                        
-                     }   
+      
+                     
     
     var secsDiff = new Date().getTime() - startTime.getTime();
     var sasi = Math.floor(secsDiff / 1000);
@@ -393,6 +295,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
                     if (ultrasasi < -62) {
                     
                    document.getElementById("myNav").style.width = "100%";
+                   document.getElementById("fr").style.display = "none";
+                document.getElementById("fra").style.display = "none";
                           
                         }
     
