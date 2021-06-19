@@ -26,8 +26,11 @@
                    
 
                    <h3>Important Instructions For Candidates</h1>
-                    <ul>
-                      <li><h3>Do not refresh or leave the page once Exam have Started</h3></li>
+                  
+                    </ul>
+                     <ul>
+  
+                      <li><a>Do not refresh or leave the page once Exam have Started</a></li>
                       <li>Exam can be attended at any time according to the candidates convinience in between 4:30 PM and 8:30 PM IST.</li>
                       <li>Once you click start you have 45 Minutes to complete the exam.</li>
                       <li>The timer cannot paused or restarted after you click the start button.</li>
@@ -35,6 +38,7 @@
                       <li>A candidate must attend the exam only once, filling the form multiple times will lead to disqualification.</li>
                       <li>Any type of malpractice will lead to disqualification</li>
                     </ul>
+                   
   
                         
                   
@@ -165,10 +169,9 @@ section.features-section {
 ul {
   margin: 0;
   padding-left: .1em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 ul li {
@@ -177,6 +180,15 @@ ul li {
   margin-left: 2em;
   position: relative;
 }
+
+ul li a {
+  font-size: 1.2em;
+  font-weight: bolder
+
+}
+
+
+
 
 ul li:before {
   content: '';
