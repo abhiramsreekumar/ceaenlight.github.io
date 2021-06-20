@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enlight1.0 KEAM</title>
+    <title>Enlight1.0 NEET</title>
 </head>
 <body>
     <div class="navbar">
         <div class="container">
             <a class="logo" href="#">Enlight<span>1.0</span></a>
 
-            
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation" style="display: none;">
+
+            <nav style="display: none;">
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                
+                <ul class="primary-nav">
+                    <li class="current"><a href="http://cea.ac.in/">CE Adoor</a></li>
+                
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li><a href="https://www.instagram.com/nss_cea/">NSS CEA</a></li>
+                    
+                </ul>
+            </nav>
         </div>
     </div>
 
@@ -47,7 +61,7 @@
 
         
         
-        var countDownDate = new Date("Jun 20, 2021 16:30:00").getTime();
+        var countDownDate = new Date("Jun 20, 2021 12:32:00").getTime();
         var x = setInterval(function() 
         {
 
@@ -69,7 +83,6 @@
        
         if (distance < 0) 
         {
-          document.getElementById("timer").innerHTML = "Exam Started";
             window.location.replace('./start_exam.html');
             
         }
@@ -378,90 +391,7 @@ nav li a:hover {
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .container {
-    width: 1080px;
-    margin: 0 auto;
-  }
-  section {
-    padding: 10em 4em;
-  }
-  .hero .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    text-align: left;
-  }
-  .hero .container .left-col {
-    margin: 3em 3em 0 5em;
-  }
-  .hero .container .left-col h1 {
-    font-size: 3em;
-    width: 90%;
-  }
-  .hero-img {
-    width: 30%;
-    margin-right: 8em;
-  }
-  .hero-cta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .primary-cta {
-    margin-right: 1em;
-  }
-  ul.features-list {
-    display: block;
-    margin-left: 5em;
-  }
-  ul.features-list li {
-    font-size: 1.4em;
-  }
-  ul.features-list li:before {
-    width: 30px;
-    height: 30px;
-  }
-  .features-section {
-    position: relative;
-  }
-  .features-section img {
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 350px;
-    bottom: -2em;
-  }
-  .testimonials-section ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .testimonials-section ul li {
-    margin: 0 1em;
-  }
-  .contact-section {
-    position: relative;
-  }
-  .contact-section .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .contact-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 45%;
-    height: 100%;
-  }
-  .contact-right iframe {
-    height: 100%;
-  }
-}
+
 
 @media only screen and (min-width: 1450px) {
   .features-section:before {
