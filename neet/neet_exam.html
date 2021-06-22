@@ -137,7 +137,7 @@
           <button style="display:none;" onclick="resetStartTimedeletethis()">Reset</button> 
         </div>
 
-        <iframe id="fr" src="https://docs.google.com/forms/d/e/1FAIpQLSebmvJEniDXz92Jq6WckqfWI2aJGZOdSI3SgJRAGhi18l4BpQ/viewform?embed=true" width="100%" height="100%"></iframe>
+        <iframe id="fr" src="https://docs.google.com/forms/d/e/1FAIpQLScBihmFqJgOSuGa050TUi6MxaXhjIRSCBHwJaJvdAf-CAes0g/viewform?embed=true" width="100%" height="100%"></iframe>
 
 
         <script>
@@ -156,12 +156,12 @@ var wakeLockEnabled = false;
 
 
 //To check the number of page loads
-var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
+var n = localStorage.getItem('loadcount4'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
           if (n === null) {
           n = 0;
           }
           n++;
-          localStorage.setItem("loadcount3", n);
+          localStorage.setItem("loadcount4", n);
           console.log(n);
           if (n > 3) {
                 
@@ -181,22 +181,22 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
 //Dynamic Countdown
         // Code goes here
 function resetStartTime() {
-  startTime = new Date();
-  window.localStorage.setItem('startTime', startTime);
-  return startTime;
+  startTime1 = new Date();
+  window.localStorage.setItem('startTime1', startTime1);
+  return startTime1;
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
 
   var mainsasi = 2700;
   // get timestamp
-  startTime = new Date(window.localStorage.getItem('startTime') || resetStartTime());
+  startTime1 = new Date(window.localStorage.getItem('startTime1') || resetStartTime());
   // start timer
   window.setInterval(function() {
       
                      
     
-    var secsDiff = new Date().getTime() - startTime.getTime();
+    var secsDiff = new Date().getTime() - startTime1.getTime();
     var sasi = Math.floor(secsDiff / 1000);
     var ultrasasi = mainsasi-sasi;
     var hours = Math.floor((ultrasasi % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
