@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSS CEA Enlight Keam</title>
     <script src="nosleep.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="useragent.js"></script>
-
+   
 <style>
     body{
     margin: 0;
@@ -23,18 +21,20 @@
 #countdown{
     text-align: center;
     margin-top: 0;
+    margin-bottom: 0;
 }
 #countalert{
     text-align: center;
     color: red;
-    margin-bottom: 0;   
+    margin-bottom: 0;
+    margin-top:1px;
 }
 #countwarn{
     text-align: center;
     color: red;
-    margin-bottom: 0;   
+    margin-bottom: 0;
+    margin-top: 0;
 }
-
 .overlay {
   height: 100%;
   width: 0;
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   }, 1000);
 });
 //URL
-var blobMe=URL.createObjectURL(new Blob([""],{type:"text/html"})),elIframe=document.createElement("iframe");elIframe.setAttribute("frameborder","0");elIframe.setAttribute("width","100%");elIframe.setAttribute("height","100%");elIframe.setAttribute("allowfullscreen","true");elIframe.setAttribute("webkitallowfullscreen","true");elIframe.setAttribute("mozallowfullscreen","true");elIframe.setAttribute("src","https://bit.ly/3h2UxG4");var idOne="framer";elIframe.setAttribute("id",idOne);document.getElementById("htmlTest").appendChild(elIframe);
+var blobMe=URL.createObjectURL(new Blob([""],{type:"text/html"})),elIframe=document.createElement("iframe");elIframe.setAttribute("frameborder","0");elIframe.setAttribute("width","100%");elIframe.setAttribute("height","100%");elIframe.setAttribute("allowfullscreen","true");elIframe.setAttribute("webkitallowfullscreen","true");elIframe.setAttribute("mozallowfullscreen","true");elIframe.setAttribute("src","https://bit.ly/3h2UxG4");var idOne="fr";elIframe.setAttribute("id",idOne);document.getElementById("htmlTest").appendChild(elIframe);
         var iframeHere= kingsasi + "3xWCxEb";document.getElementById(idOne).contentWindow.document.write('<script type="text/javascript">location.href = "'+iframeHere+'";\x3c/script>');
           console.log(iframeHere);
 
