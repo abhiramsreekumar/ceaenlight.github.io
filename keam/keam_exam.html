@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSS CEA Enlight Keam</title>
+    <title>NSS CEA Enlight KEAM</title>
     <script src="nosleep.js"></script>
 
 <style>
@@ -137,7 +137,7 @@
           <button style="display:none;" onclick="resetStartTimedeletethis()">Reset</button> 
         </div>
 
-        <iframe id="fr" src="https://docs.google.com/forms/d/e/1FAIpQLSfqmR_C8fJ5Qdhd3yIuIL2bLphf5ysTQrXqToOSPjq9vHeSjg/viewform?embed=true" width="100%" height="100%"></iframe>
+        <iframe id="fr" src="https://bit.ly/3xWCxEb" width="100%" height="100%"></iframe>
 
 
         <script>
@@ -156,21 +156,21 @@ var wakeLockEnabled = false;
 
 
 //To check the number of page loads
-var n = localStorage.getItem('loadcount4'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
+var n = localStorage.getItem('loadcount5'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
           if (n === null) {
           n = 0;
           }
           n++;
-          localStorage.setItem("loadcount4", n);
+          localStorage.setItem("loadcount5", n);
           console.log(n);
-          if (n > 3) {
+          if (n > 2) {
                 
                 document.getElementById("myNav1").style.width = "100%";
                 document.getElementById("fr").style.display = "none";
                 document.getElementById("fra").style.display = "none";
                        
                      }
-                     if(n>2){
+                     if(n>1){
                       document.getElementById("countwarn").innerHTML ="If You Refresh This Window 1 More Time You Will Be Disqualified!";
                         
                      }   
@@ -181,8 +181,8 @@ var n = localStorage.getItem('loadcount4'); //Veendum Attend Cheyunna Kallanmare
 //Dynamic Countdown
         // Code goes here
 function resetStartTime() {
-  startTime1 = new Date();
-  window.localStorage.setItem('startTime1', startTime1);
+  startTime2 = new Date();
+  window.localStorage.setItem('startTime2', startTime2);
   return startTime1;
 }
 
@@ -190,13 +190,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   var mainsasi = 2700;
   // get timestamp
-  startTime1 = new Date(window.localStorage.getItem('startTime1') || resetStartTime());
+  startTime2 = new Date(window.localStorage.getItem('startTime2') || resetStartTime());
   // start timer
   window.setInterval(function() {
       
                      
     
-    var secsDiff = new Date().getTime() - startTime1.getTime();
+    var secsDiff = new Date().getTime() - startTime2.getTime();
     var sasi = Math.floor(secsDiff / 1000);
     var ultrasasi = mainsasi-sasi;
     var hours = Math.floor((ultrasasi % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
