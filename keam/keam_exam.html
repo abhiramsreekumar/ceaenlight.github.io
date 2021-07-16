@@ -192,7 +192,7 @@ var wakeLockEnabled = false;
     wakeLockEnabled = true;
   }
 //To check if user is on the browser  
-var k = localStorage.getItem('switchcount5');//
+var k = localStorage.getItem('switchcount11');//
 var vis = (function(){
 	var stateKey, eventKey, keys = {
 		hidden: "visibilitychange",
@@ -226,19 +226,19 @@ vis(function(){
   if(vis)
   {
     k++;
-    localStorage.setItem("switchcount5", k);
+    localStorage.setItem("switchcount11", k);
     console.log(new Date, k);   
   }
 
 });
 
 //To check the number of page loads
-var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
+var n = localStorage.getItem('loadcount11'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
           if (n === null) {
           n = 0;
           }
           n++;
-          localStorage.setItem("loadcount3", n);
+          localStorage.setItem("loadcount11", n);
           console.log(n);
           if (n > 3) {
                 
@@ -258,9 +258,9 @@ var n = localStorage.getItem('loadcount3'); //Veendum Attend Cheyunna Kallanmare
 //Dynamic Countdown
         // Code goes here
 function resetStartTime() {
-  startTime = new Date();
-  window.localStorage.setItem('startTime', startTime);
-  return startTime;
+  startTime11 = new Date();
+  window.localStorage.setItem('startTime11', startTime11);
+  return startTime11;
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var mainsasi = 9000;
   
   // get timestamp
-  startTime = new Date(window.localStorage.getItem('startTime') || resetStartTime());
+  startTime11 = new Date(window.localStorage.getItem('startTime11') || resetStartTime());
   // start timer
   window.setInterval(function() {
     if (k > 3) {
