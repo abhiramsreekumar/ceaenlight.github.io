@@ -193,7 +193,7 @@ var wakeLockEnabled = false;
     wakeLockEnabled = true;
   }
 //To check if user is on the browser  
-var k = localStorage.getItem('switchcount11');//
+var k = localStorage.getItem('switchcount12');//
 var vis = (function(){
 	var stateKey, eventKey, keys = {
 		hidden: "visibilitychange",
@@ -227,19 +227,19 @@ vis(function(){
   if(vis)
   {
     k++;
-    localStorage.setItem("switchcount11", k);
+    localStorage.setItem("switchcount12", k);
     console.log(new Date, k);   
   }
 
 });
 
 //To check the number of page loads
-var n = localStorage.getItem('loadcount11'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
+var n = localStorage.getItem('loadcount12'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
           if (n === null) {
           n = 0;
           }
           n++;
-          localStorage.setItem("loadcount11", n);
+          localStorage.setItem("loadcount12", n);
           console.log(n);
           if (n > 2) {
                 
@@ -259,9 +259,9 @@ var n = localStorage.getItem('loadcount11'); //Veendum Attend Cheyunna Kallanmar
 //Dynamic Countdown
         // Code goes here
 function resetStartTime() {
-  startTime11 = new Date();
-  window.localStorage.setItem('startTime11', startTime11);
-  return startTime11;
+  startTime12 = new Date();
+  window.localStorage.setItem('startTime12', startTime12);
+  return startTime12;
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var mainsasi = 9000;
   
   // get timestamp
-  startTime11 = new Date(window.localStorage.getItem('startTime11') || resetStartTime());
+  startTime12 = new Date(window.localStorage.getItem('startTime12') || resetStartTime());
   // start timer
   window.setInterval(function() {
     if (k > 3) {
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
                         
                      }   
     
-    var secsDiff = new Date().getTime() - startTime11.getTime();
+    var secsDiff = new Date().getTime() - startTime12.getTime();
     var sasi = Math.floor(secsDiff / 1000);
     var ultrasasi = mainsasi-sasi;
     var hours = Math.floor((ultrasasi % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
