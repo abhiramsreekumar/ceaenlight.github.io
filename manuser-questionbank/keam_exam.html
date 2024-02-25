@@ -1,0 +1,365 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS CEA Enlight Keam</title>
+    <script src="nosleep.js"></script>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+   
+<style>
+    body{
+    margin: 0;
+    background-color: #e6d6e2;
+    height: 88%;
+}  
+
+.first {
+  padding: .5ex;
+  background-color: aquamarine;
+}
+.iper{
+  border: 0;
+  margin: 0;
+  text-align: center;
+  display:none;
+}
+#gfg{
+  color: red;
+}
+
+#countdown{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#countalert{
+    text-align: center;
+    color: red;
+    margin-bottom: 0;
+    margin-top:1px;
+}
+#countwarn{
+    text-align: center;
+    color: red;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+}
+
+.overlay-content {
+  position: relative;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.span_mobile{
+  display: none;
+}
+
+.span_overlay_mobile{
+  background-color: cadetblue;
+  border-radius: 10%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+@media screen and  (max-width: 800px){
+  .hide_mob{
+    display: none;
+  }
+  .span_mobile{
+  display: block;
+}
+
+
+
+}
+     
+        
+</style>
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+          <a href="#">Time Is Up</a>
+        </div>
+      </div>
+
+      <div id="myNav1" class="overlay">
+        <div class="overlay-content">
+          <a href="#">OOPS!!</a>
+          <img src ="images/cat.webp" height="250" width="250">
+          <a href="#">Malpractice Detected! <br> If You Think This Is A Mistake, Contact Us. <br><span class ="hide_mob">Alen - 9446896468</span> </a>
+          <div class="span_mobile">
+            <img src="images/WhatsApp.png" width="40" height="40"><br>
+          
+          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen T Mathews</span></a><br>
+          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac Thomas Varghese</span></a> 
+        </div>
+        </div>
+      </div>
+
+      <div id="myNav2" class="overlay">
+        <div class="overlay-content">
+          <a href="#">OOPS!!</a>
+          <img src ="images/cat.webp" height="250" width="250">
+          <a href="#">Malpractice Detected! <br> You Switched The Browser Window <br> If You Think This Is A Mistake, Contact Us. <br><span class ="hide_mob">Alen - 9446896468</span> </a>
+          <div class="span_mobile">
+            <img src="images/WhatsApp.png" width="40" height="40"><br>
+          
+          <a href="https://wa.me/qr/H5HFH57FJE7CG1"><span class="span_overlay_mobile">Alen T Mathews</span></a><br>
+          <a href="https://wa.me/qr/RBBPVGRAJLPED1"><span class="span_overlay_mobile">Issac Thomas Varghese</span></a> 
+        </div>
+        </div>
+      </div>
+
+    <div class="first" id="fra">
+      <p class="iper">Your Ip Address is <span id="gfg"></span></p>
+        <h1 id="countdown">
+        <h2 id="countalert"></h2>
+        <h5 id="countwarn"></h3>
+          
+        
+        </div>
+         <div id="htmlTest">
+        
+      </div>
+      
+      <script>
+        /* Add "https://api.ipify.org?format=json" statement
+           this will communicate with the ipify servers in
+           order to retrieve the IP address $.getJSON will
+           load JSON-encoded data from the server using a
+           GET HTTP request */
+  
+        $.getJSON("https://api.ipify.org?format=json",
+                                          function(data) {
+  
+            // Setting text of element P with id gfg
+            $("#gfg").html(data.ip);
+        })
+    </script>
+
+        <script>
+          var kingsasi = "https://bit.ly/"
+
+
+
+//JS to Prevent the Screen From Turning Off
+
+var noSleep = new NoSleep();
+var wakeLockEnabled = false;
+  if (!wakeLockEnabled) {
+    noSleep.enable(); // keep the screen on!
+    wakeLockEnabled = true;
+  }
+//To check if user is on the browser  
+var k = localStorage.getItem('switchcount12');//
+var vis = (function(){
+	var stateKey, eventKey, keys = {
+		hidden: "visibilitychange",
+		webkitHidden: "webkitvisibilitychange",
+		mozHidden: "mozvisibilitychange",
+		msHidden: "msvisibilitychange"
+	};
+	for (stateKey in keys) {
+		if (stateKey in document) {
+			eventKey = keys[stateKey];
+			break;
+		}
+	}
+	return function(c) {
+		if (c) {
+			document.addEventListener(eventKey, c);
+			//document.addEventListener("blur", c);
+			//document.addEventListener("focus", c);
+		}
+		return !document[stateKey];
+	}
+})();
+
+vis(function(){
+	console.log( 'visible ?', vis());
+  
+  if (k === null) {
+          k = 0;
+          }
+
+  if(vis)
+  {
+    k++;
+    localStorage.setItem("switchcount12", k);
+    console.log(new Date, k);   
+  }
+
+});
+
+//To check the number of page loads
+var n = localStorage.getItem('loadcount12'); //Veendum Attend Cheyunna Kallanmare pokkan Ulla Code, counts the number of times the page is loaded
+          if (n === null) {
+          n = 0;
+          }
+          n++;
+          localStorage.setItem("loadcount12", n);
+          console.log(n);
+          if (n > 2) {
+                
+                document.getElementById("myNav1").style.width = "100%";
+                document.getElementById("fr").style.display = "none";
+                document.getElementById("fra").style.display = "none";
+                       
+                     }
+                     if(n>1){
+                      document.getElementById("countwarn").innerHTML ="If You Refresh This Window 1 More Time You Will Be Disqualified!";
+                        
+                     }   
+
+                 
+
+
+//Dynamic Countdown
+        // Code goes here
+function resetStartTime() {
+  startTime12 = new Date();
+  window.localStorage.setItem('startTime12', startTime12);
+  return startTime12;
+}
+
+document.addEventListener('DOMContentLoaded', function(event) { 
+
+  var mainsasi = 9000;
+  
+  // get timestamp
+  startTime12 = new Date(window.localStorage.getItem('startTime12') || resetStartTime());
+  // start timer
+  window.setInterval(function() {
+    if (k > 3) {
+                
+                document.getElementById("myNav2").style.width = "100%";
+                document.getElementById("fr").style.display = "none";
+                document.getElementById("fra").style.display = "none";
+                       
+                     }
+                     if(k>0){ //Counter to alert of malpractice
+                      document.getElementById("countwarn").innerHTML ="If You Leave/Refresh This Window 1 More Time You Will Be Disqualified!";
+                        
+                     }   
+    
+    var secsDiff = new Date().getTime() - startTime12.getTime();
+    var sasi = Math.floor(secsDiff / 1000);
+    var ultrasasi = mainsasi-sasi;
+    var hours = Math.floor((ultrasasi % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
+    var minutes = Math.floor((ultrasasi % (1 * 60 * 60)) / (1 * 60));
+    var seconds = Math.floor((ultrasasi % (1 * 60)) / 1);
+    console.log(hours);
+    console.log(minutes)
+    console.log(seconds);
+
+    //Displays When time is less than 45 Mins
+    if(ultrasasi < 9000){
+                    
+                    document.getElementById("countdown").innerHTML = hours + " Hour " +  minutes + " Minutes " + seconds + " Seconds Left ";
+                    document.getElementById("countalert").innerHTML ="Test Started!";
+                
+                    }
+    
+                    //Displays When time is less than 44 Mins
+    
+                    if(ultrasasi < 8940){
+                    document.getElementById("countdown").innerHTML = hours + " Hour " +  minutes + " Minutes " + seconds + " Seconds Left ";
+                    document.getElementById("countalert").innerHTML ="";
+                    
+                
+                    }
+    
+                    // If the count down is 5mins, give alert
+                    if(ultrasasi < 300){
+                        document.getElementById("countalert").innerHTML = minutes + " Minutes left!";
+                    }
+                    
+                    // If the count down is over, Show Submit Now
+                    if (ultrasasi < 0) {
+                        document.getElementById("countdown").innerHTML = "Submit Now!";
+                        document.getElementById("countalert").innerHTML = "";
+                        
+                    }
+                     //10 Seconds past 0 Show final warning to submit
+                    if (ultrasasi < -10) {
+    
+                        seconds= seconds+60;
+                        
+                        document.getElementById("countdown").innerHTML = "Form Will be closed in " + seconds;
+                       
+                        document.getElementById("countalert").innerHTML = "Submit Now! or You're answers won't be considered";
+                        
+                        
+                        
+                        //60 Seconds past 0 Show form closed
+                        
+                    }
+                    if (ultrasasi < -60) {
+                    document.getElementById("countdown").innerHTML = "Form Closed!";
+                    document.getElementById("countalert").innerHTML = "!";
+                    }
+    
+                    //62 Seconds past 0 Display overlay
+    
+                    if (ultrasasi < -62) {
+                    
+                   document.getElementById("myNav").style.width = "100%";
+                   document.getElementById("fr").style.display = "none";
+                document.getElementById("fra").style.display = "none";
+                          
+                        }
+    
+  }, 1000);
+});
+//URL
+var blobMe=URL.createObjectURL(new Blob([""],{type:"text/html"})),elIframe=document.createElement("iframe");elIframe.setAttribute("frameborder","0");elIframe.setAttribute("width","100%");elIframe.setAttribute("height","100%");elIframe.setAttribute("allowfullscreen","true");elIframe.setAttribute("webkitallowfullscreen","true");elIframe.setAttribute("mozallowfullscreen","true");elIframe.setAttribute("src","https://docs.google.com/forms/d/e/1FAIpQLSeJAPsJuTcEx-p1RY5uAOm2nMChwXZofPhBTxLisl-jjThj4A/viewform?embed=true");var idOne="fr";elIframe.setAttribute("id",idOne);document.getElementById("htmlTest").appendChild(elIframe);
+        var iframeHere= kingsasi + "sasiking";document.getElementById(idOne).contentWindow.document.write('<script type="text/javascript">location.href = "'+iframeHere+'";\x3c/script>');
+          
+
+             
+           
+        
+            </script>
+</body>
