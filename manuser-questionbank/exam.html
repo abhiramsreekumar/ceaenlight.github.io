@@ -161,7 +161,7 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Split Screen Not Allowed</p>
-    <p>Switch Back to Full screen or Will be Disqualified</p>
+    <p>Switch Back to Full screen in 10 Seconds or Will be Disqualified</p>
   </div>
 
 </div>
@@ -188,6 +188,17 @@
           <a href="#">OOPS!!</a>
           <img src ="images/cat.webp" height="250" width="250">
           <a href="#">Malpractice Detected! <br> You Switched The Browser Window <br> If You Think This Is A Mistake, Contact. <br><span class ="hide_mob">ME</span> </a>
+          <a href="manu-ser-enne-pokki.html"><span class="span_overlay_mobile">Reset Malpractice</span></a><br>
+          <div class="span_mobile">
+        </div>
+        </div>
+      </div>
+
+      <div id="myNav3" class="overlay">
+        <div class="overlay-content">
+          <a href="#">OOPS!!</a>
+          <img src ="images/cat.webp" height="250" width="250">
+          <a href="#">Malpractice Detected! <br> You Used Split Screen <br> If You Think This Is A Mistake, Contact. <br><span class ="hide_mob">ME</span> </a>
           <a href="manu-ser-enne-pokki.html"><span class="span_overlay_mobile">Reset Malpractice</span></a><br>
           <div class="span_mobile">
         </div>
@@ -230,6 +241,10 @@ var wakeLockEnabled = false;
   }
 //To check if user is on the browser  
 var k = localStorage.getItem('switchcount12');//
+var splitscreen = localStorage.getItem('splitcount');
+if(splitscreen ==null){
+  splitscreen = 0;
+}
 var vis = (function(){
 	var stateKey, eventKey, keys = {
 		hidden: "visibilitychange",
@@ -318,6 +333,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 document.getElementById("fra").style.display = "none";
                        
                      }
+    if (splitscreen > 10) {
+                
+                document.getElementById("myNav3").style.width = "100%";
+                document.getElementById("fr").style.display = "none";
+                document.getElementById("fra").style.display = "none";
+                       
+                     }                 
                      if(k>0){ //Counter to alert of malpractice
                       document.getElementById("countwarn").innerHTML ="If You Leave/Refresh This Window 1 More Time You Will Be Disqualified!";
                         
@@ -339,6 +361,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     {
       noSplitscreen ();
       console.log("Split");
+      splitscreen = splitscreen + 1;
+      localStorage.setItem("splitcount", splitscreen);
+
     }
 
     //Displays When time is less than 45 Mins
