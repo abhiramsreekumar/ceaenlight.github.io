@@ -213,6 +213,7 @@
           var kingsasi = "https://bit.ly/"
           var screen = localStorage.getItem('screenheight');
           if(screen ==null){
+            screen = window.innerHeight
             localStorage.setItem("screenheight", window.innerHeight);
           }
           
