@@ -207,7 +207,7 @@
 
     <div class="first" id="fra">
       <p class="iper">Your Ip Address is <span id="gfg"></span></p>
-        <h1 id="countdown">
+        <h2 id="countdown">Don't Refresh or Switch tabs, This page has anti-malpractice features enabled</h2>
         <h2 id="countalert"></h2>
         <h5 id="countwarn"></h3>
           
@@ -345,85 +345,85 @@ document.addEventListener('DOMContentLoaded', function(event) {
                         
                      }   
     
-    var secsDiff = new Date().getTime() - startTime12.getTime();
-    var sasi = Math.floor(secsDiff / 1000);
-    var ultrasasi = mainsasi-sasi;
-    var hours = Math.floor((ultrasasi % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
-    var minutes = Math.floor((ultrasasi % (1 * 60 * 60)) / (1 * 60));
-    var seconds = Math.floor((ultrasasi % (1 * 60)) / 1);
-    console.log(hours);
-    console.log(minutes)
-    console.log(seconds);
-    console.log("Screen"+window.innerHeight)
-    var currscreen = window.innerHeight
+    // var secsDiff = new Date().getTime() - startTime12.getTime();
+    // var sasi = Math.floor(secsDiff / 1000);
+    // var ultrasasi = mainsasi-sasi;
+    // var hours = Math.floor((ultrasasi % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
+    // var minutes = Math.floor((ultrasasi % (1 * 60 * 60)) / (1 * 60));
+    // var seconds = Math.floor((ultrasasi % (1 * 60)) / 1);
+    // console.log(hours);
+    // console.log(minutes)
+    // console.log(seconds);
+    // console.log("Screen"+window.innerHeight)
+    // var currscreen = window.innerHeight
 
-    if(currscreen < screen-20)
-    {
-      noSplitscreen ();
-      console.log("Split");
-      splitscreen = splitscreen + 1;
-      localStorage.setItem("splitcount", splitscreen);
+    // if(currscreen < screen-20)
+    // {
+    //   noSplitscreen ();
+    //   console.log("Split");
+    //   splitscreen = splitscreen + 1;
+    //   localStorage.setItem("splitcount", splitscreen);
 
-    }
+    // }
 
     //Displays When time is less than 45 Mins
-    if(ultrasasi < 9000){
+  //   if(ultrasasi < 9000){
                     
-                    document.getElementById("countdown").innerHTML = hours + " Hour " +  minutes + " Minutes " + seconds + " Seconds Left ";
-                    document.getElementById("countalert").innerHTML ="Test Started!";
+  //                   document.getElementById("countdown").innerHTML = hours + " Hour " +  minutes + " Minutes " + seconds + " Seconds Left ";
+  //                   document.getElementById("countalert").innerHTML ="Test Started!";
                 
-                    }
+  //                   }
     
-                    //Displays When time is less than 44 Mins
+  //                   //Displays When time is less than 44 Mins
     
-                    if(ultrasasi < 8940){
-                    document.getElementById("countdown").innerHTML = hours + " Hour " +  minutes + " Minutes " + seconds + " Seconds Left ";
-                    document.getElementById("countalert").innerHTML ="";
+  //                   if(ultrasasi < 8940){
+  //                   document.getElementById("countdown").innerHTML = hours + " Hour " +  minutes + " Minutes " + seconds + " Seconds Left ";
+  //                   document.getElementById("countalert").innerHTML ="";
                     
                 
-                    }
+  //                   }
     
-                    // If the count down is 5mins, give alert
-                    if(ultrasasi < 300){
-                        document.getElementById("countalert").innerHTML = minutes + " Minutes left!";
-                    }
+  //                   // If the count down is 5mins, give alert
+  //                   if(ultrasasi < 300){
+  //                       document.getElementById("countalert").innerHTML = minutes + " Minutes left!";
+  //                   }
                     
-                    // If the count down is over, Show Submit Now
-                    if (ultrasasi < 0) {
-                        document.getElementById("countdown").innerHTML = "Submit Now!";
-                        document.getElementById("countalert").innerHTML = "";
+  //                   // If the count down is over, Show Submit Now
+  //                   if (ultrasasi < 0) {
+  //                       document.getElementById("countdown").innerHTML = "Submit Now!";
+  //                       document.getElementById("countalert").innerHTML = "";
                         
-                    }
-                     //10 Seconds past 0 Show final warning to submit
-                    if (ultrasasi < -10) {
+  //                   }
+  //                    //10 Seconds past 0 Show final warning to submit
+  //                   if (ultrasasi < -10) {
     
-                        seconds= seconds+60;
+  //                       seconds= seconds+60;
                         
-                        document.getElementById("countdown").innerHTML = "Form Will be closed in " + seconds;
+  //                       document.getElementById("countdown").innerHTML = "Form Will be closed in " + seconds;
                        
-                        document.getElementById("countalert").innerHTML = "Submit Now! or You're answers won't be considered";
+  //                       document.getElementById("countalert").innerHTML = "Submit Now! or You're answers won't be considered";
                         
                         
                         
-                        //60 Seconds past 0 Show form closed
+  //                       //60 Seconds past 0 Show form closed
                         
-                    }
-                    if (ultrasasi < -60) {
-                    document.getElementById("countdown").innerHTML = "Form Closed!";
-                    document.getElementById("countalert").innerHTML = "!";
-                    }
+  //                   }
+  //                   if (ultrasasi < -60) {
+  //                   document.getElementById("countdown").innerHTML = "Form Closed!";
+  //                   document.getElementById("countalert").innerHTML = "!";
+  //                   }
     
-                    //62 Seconds past 0 Display overlay
+  //                   //62 Seconds past 0 Display overlay
     
-                    if (ultrasasi < -62) {
+  //                   if (ultrasasi < -62) {
                     
-                   document.getElementById("myNav").style.width = "100%";
-                   document.getElementById("fr").style.display = "none";
-                document.getElementById("fra").style.display = "none";
+  //                  document.getElementById("myNav").style.width = "100%";
+  //                  document.getElementById("fr").style.display = "none";
+  //               document.getElementById("fra").style.display = "none";
                           
-                        }
+  //                       }
     
-  }, 1000);
+  // }, 1000);
 });
 //URL
 var blobMe=URL.createObjectURL(new Blob([""],{type:"text/html"})),elIframe=document.createElement("iframe");elIframe.setAttribute("frameborder","0");elIframe.setAttribute("width","100%");elIframe.setAttribute("height","100%");elIframe.setAttribute("allowfullscreen","true");elIframe.setAttribute("webkitallowfullscreen","true");elIframe.setAttribute("mozallowfullscreen","true");elIframe.setAttribute("src","https://docs.google.com/forms/d/e/1FAIpQLScysdLv5AIM3J4-UL-SkAY3NmSZiaC7M3ATa3_x2yVL3CC6Bw/viewform?embed=true");var idOne="fr";elIframe.setAttribute("id",idOne);document.getElementById("htmlTest").appendChild(elIframe);
